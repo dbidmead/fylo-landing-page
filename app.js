@@ -1,6 +1,8 @@
 const emailInput = document.querySelector("#email-input");
 const errMessage = document.querySelector(".error-message");
 const submitBtn = document.querySelector("#access-btn");
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".nav-links");
 
 const emailRegEx =
   /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -22,4 +24,9 @@ submitBtn.addEventListener("click", (e) => {
   } else {
     emailInput.value = "";
   }
+});
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
 });
